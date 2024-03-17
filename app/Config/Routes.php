@@ -8,3 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->get('/dosen', 'Dosen::index');
+$routes->get('/dosen/create', 'Dosen::create');
+$routes->post('/dosen/store', 'Dosen::store');
