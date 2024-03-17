@@ -18,22 +18,24 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form method="post" action="<?= url_to('Dosen::store') ?>">
+                        <form method="post" action="<?= url_to('Dosen::update', $dosen['id_dosen']) ?>">
+                            <input type="hidden" name="_method" value="put">
+
                             <div class="mb-4">
                                 <label for"kode_dosen">Kode Dosen</label>
-                                <input type="text" name="kode_dosen" id="kode_dosen" class="form-control">
+                                <input type="text" name="kode_dosen" id="kode_dosen" class="form-control" value="<?= $dosen['kode_dosen'] ?>">
                             </div>
 
                             <div class="mb-4">
                                 <label for"nama_dosen">Nama Dosen</label>
-                                <input type="text" name="nama_dosen" id="status_dosen" class="form-control">
+                                <input type="text" name="nama_dosen" id="status_dosen" class="form-control" value="<?= $dosen['nama_dosen'] ?>">
                             </div>
 
                             <div class="mb-4">
                                 <label for"status_dosen">Status Dosen</label>
                                 <select name="status_dosen" id="status_dosen" class="form-control">
-                                    <option value="0">Tidak Aktif</option>
-                                    <option value="1">Aktif</option>
+                                    <option value="0" <?= (! $dosen['kode_dosen']) ? 'selected' : '' ?>>Tidak Aktif</option>
+                                    <option value="1" <?= ($dosen['status_dosen']) ? 'selected' : '' ?>>Aktif</option>
                                </select>
                           </div>
 

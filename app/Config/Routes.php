@@ -10,3 +10,5 @@ $routes->get('/', 'Home::index');
 $routes->get('/dosen', 'Dosen::index');
 $routes->get('/dosen/create', 'Dosen::create');
 $routes->post('/dosen/store', 'Dosen::store');
+$routes->get('/dosen/edit/(:num)', 'Dosen::edit/$1');
+$routes->put('/dosen/update/(:num)', 'Dosen::update/$1');
