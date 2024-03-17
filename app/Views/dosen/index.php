@@ -29,7 +29,7 @@
                                 <td><?= $dosen['status_dosen'] ? 'Aktif' : 'Tidak Aktif' ?></td>
                                 <td class="text-center">
                                     <a href="/dosen/edit/<?= $dosen['id_dosen']; ?>">Edit</a>
-                                    <a href="/dosen/delete/<?= $dosen['id_dosen']; ?>">Delete</a>
+                                    <a href="/dosen/delete/<?= $dosen['id_dosen']; ?>" onclick="destroy(event)">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>

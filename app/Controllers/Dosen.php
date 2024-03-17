@@ -71,4 +71,11 @@ class Dosen extends BaseController
 
         return redirect()->route('Dosen::index')->with('message', 'Sukses ubah data');
     }
+
+    public function destroy(int $id)
+    {
+        $this->dosen->delete($id);
+
+        return redirect()->back()->with('message', 'Sukses hapus data');
+    }
 }
