@@ -28,13 +28,15 @@
                                 <td><?= $dosen['nama_dosen'] ?></td>
                                 <td><?= $dosen['status_dosen'] ? 'Aktif' : 'Tidak Aktif' ?></td>
                                 <td class="text-center">
-                                    <a href="/dosen/edit/<?= $dosen['id_dosen']; ?>">Edit</a>
-                                    <a href="/dosen/delete/<?= $dosen['id_dosen']; ?>" onclick="destroy(event)">Delete</a>
+                                    <a href="<?= url_to('Dosen::edit', $dosen['id_dosen']); ?>">Edit</a>
+                                    <a href="<?= url_to('Dosen::destroy', $dosen['id_dosen']); ?>" onclick="destroy(event)">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>
                 </table>
+
+                <?= $pager->links('dosen', 'pagination') ?>
             </div>
         </div>
     </div>
