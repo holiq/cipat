@@ -2,10 +2,10 @@
 
 function sendTelegramNotification($msg)
 {
-    $token = '7080219501:AAE6D8DOJP57XXX9u8zneiMjKQILk1Iwqmc';
+    $token = getenv('TELEGRAM_BOT_TOKEN');
 
     $message = [
-        'chat_id' => '-1002047418871',
+        'chat_id' => getenv('TELEGRAM_CHAT_ID'),
         'text'    => $msg,
     ];
 
