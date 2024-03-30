@@ -6,7 +6,6 @@ use App\Models\Dosen as DosenModel;
 
 class Dosen extends BaseController
 {
-    protected $helpers = ['url', 'form'];
     protected $dosen;
     protected $rules;
 
@@ -45,6 +44,8 @@ class Dosen extends BaseController
         }
 
         $this->dosen->save($data);
+
+        sendTelegramNotification('Menambahkan Dosen ' . $data['nama_dosen']);
 
         return redirect()->route('Dosen::index')->with('message', 'Sukses tambah data');
     }
