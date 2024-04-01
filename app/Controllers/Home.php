@@ -4,8 +4,12 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('welcome_message');
+        if (! session()->has('username')) {
+            return redirect('Login::index');
+        }
+
+        return view('home');
     }
 }

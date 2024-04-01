@@ -45,7 +45,7 @@ class Dosen extends BaseController
 
         $this->dosen->save($data);
 
-        sendTelegramNotification('Menambahkan Dosen ' . $data['nama_dosen']);
+        sendTelegramNotification('User ' . session()->get('username') . ' menambahkan Dosen ' . $data['nama_dosen']);
 
         return redirect()->route('Dosen::index')->with('message', 'Sukses tambah data');
     }

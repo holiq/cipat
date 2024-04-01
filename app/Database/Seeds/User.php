@@ -11,7 +11,7 @@ class User extends Seeder
     {
         $data = [
             [
-                'name'     => 'Holiq',
+                'name'     => 'Holiq Ibrahim',
                 'username' => 'holiq',
                 'password' => password_hash('11111111', PASSWORD_DEFAULT),
             ],

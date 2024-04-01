@@ -13,3 +13,8 @@ $routes->post('/dosen/store', 'Dosen::store');
 $routes->get('/dosen/edit/(:num)', 'Dosen::edit/$1');
 $routes->put('/dosen/update/(:num)', 'Dosen::update/$1');
 $routes->delete('/dosen/delete/(:num)', 'Dosen::destroy/$1');
+$routes->get('/login', 'Login::index');
+$routes->post('/login', 'Login::process');
+$routes->get('/register', 'Register::index');
+$routes->post('/register', 'Register::process');
+$routes->get('/logout', 'Login::destroy');
