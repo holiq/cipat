@@ -33,6 +33,8 @@ class Register extends BaseController
             return redirect()->back()->with('errors', $this->validator->getErrors());
         }
 
+        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
         $this->user->save($data);
 
         sendTelegramNotification('Telah mendaftar user: ' . $data['name'] . ' dengan username ' . $data['username']);
