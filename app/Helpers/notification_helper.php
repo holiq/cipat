@@ -9,14 +9,16 @@ function sendTelegramNotification($msg)
         'text'    => $msg,
     ];
 
-    $url = "https://api.telegram.org/bot{$token}/sendMessage";
+    if ($token) {
+        $url = "https://api.telegram.org/bot{$token}/sendMessage";
 
-    $ch = curl_init($url);
+        $ch = curl_init($url);
 
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($message));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($message));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    curl_exec($ch);
-    curl_close($ch);
+        curl_exec($ch);
+        curl_close($ch);
+    }
 }

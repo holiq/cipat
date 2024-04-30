@@ -50,11 +50,17 @@
                     </div>
                     <div class="sidebar-menu">
                         <ul class="menu">
-                            <li class="sidebar-title">Halo <?= session()->get('name') ?></li>
+                            <li class="sidebar-title">Halo, <?= session()->get('name') ?></li>
                             <li class="sidebar-item">
                                 <a href="<?= url_to('Home::index') ?>" class='sidebar-link'>
                                     <i class="bi bi-grid-fill"></i>
                                     <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="<?= url_to('Dosen::index') ?>" class="sidebar-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>Dosen</span>
                                 </a>
                             </li>
                         </ul>

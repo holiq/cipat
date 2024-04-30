@@ -3,13 +3,13 @@
 <?= $this->section('content') ?>
 <div class="container-sm min-vh-100 d-flex flex-column">
     <div class="my-auto">
-        <?php if (!empty(session()->getFlashdata('message'))) : ?>
+        <?php if (! empty(session()->getFlashdata('message'))) : ?>
             <div class="alert alert-success">
                 <span><?= session()->getFlashdata('message') ?></span>
             </div>
         <?php endif ?>
 
-        <?php if (!empty(session()->getFlashdata('errors'))) : ?>
+        <?php if (! empty(session()->getFlashdata('errors'))) : ?>
             <div class="alert alert-danger">
                 <ul class="mb-0">
                     <?php foreach (session()->getFlashdata('errors') as $error) : ?>
