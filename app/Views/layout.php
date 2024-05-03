@@ -21,7 +21,7 @@
                     <div class="sidebar-header position-relative">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="logo">
-                                <a href="<?= route_to('Home::index') ?>"><img src="" alt="Logo" srcset=""></a>
+                                <a href="<?= route_to('Home::index') ?>"><img src="" alt="Cipat" srcset=""></a>
                             </div>
                             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -43,8 +43,8 @@
                                     </path>
                                 </svg>
                             </div>
-                            <div class="sidebar-toggler  x">
-                                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                            <div class="sidebar-toggler x">
+                                <span class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></span>
                             </div>
                         </div>
                     </div>
@@ -61,6 +61,12 @@
                                 <a href="<?= url_to('Dosen::index') ?>" class="sidebar-link">
                                     <i class="bi bi-people-fill"></i>
                                     <span>Dosen</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="<?= url_to('Product::index') ?>" class="sidebar-link">
+                                    <i class="bi bi-box-fill"></i>
+                                    <span>Barang</span>
                                 </a>
                             </li>
                         </ul>
