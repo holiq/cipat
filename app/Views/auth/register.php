@@ -18,7 +18,7 @@
                 <h4>Register</h4>
             </div>
             <div class="card-body">
-                <form method="post" action="<?= url_to('Register::process') ?>">
+                <form method="post" action="<?= route_to('Register::process') ?>">
                     <div class="mb-4">
                         <label for"name">Name</label>
                         <input type="text" name="name" id="name" class="form-control">
@@ -41,7 +41,7 @@
 
                     <div class="d-flex flex-column">
                         <button type="submit" class="btn btn-primary btn-block">REGISTER</button>
-                        <p class="btn mt-2">Already have account? <a href="<?= url_to('Login::index') ?>">Login now!</a></p>
+                        <p class="btn mt-2">Already have account? <a href="<?= route_to('Login::index') ?>">Login now!</a></p>
                     </div>
                 </form>
             </div>

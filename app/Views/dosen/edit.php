@@ -12,11 +12,11 @@
         </div>
     <?php endif ?>
 
-    <a href="<?= url_to('Dosen::index') ?>" class="btn btn-md btn-warning mb-3">Kembali</a>
+    <a href="<?= route_to('Dosen::index') ?>" class="btn btn-md btn-warning mb-3">Kembali</a>
 
     <div class="card">
         <div class="card-body">
-            <form method="post" action="<?= url_to('Dosen::update', $dosen['id_dosen']) ?>">
+            <form method="post" action="<?= route_to('Dosen::update', $dosen['id_dosen']) ?>">
                 <input type="hidden" name="_method" value="put">
 
                 <div class="mb-4">

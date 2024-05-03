@@ -8,7 +8,7 @@
         </div>
     <?php endif ?>
 
-    <a href="<?= url_to('Product::create') ?>" class="btn btn-success mb-3">Tambah Data</a>
+    <a href="<?= route_to('Product::create') ?>" class="btn btn-success mb-3">Tambah Data</a>
 
     <div class="card">
         <div class="overflow-auto m-2">
@@ -32,8 +32,8 @@
                             <td><?= $product['stock'] ?></td>
                             <td><?= $product['price'] ?></td>
                             <td class="text-center">
-                                <a href="<?= url_to('Product::edit', $product['id']); ?>">Edit</a>
-                                <a href="<?= url_to('Product::destroy', $product['id']); ?>" class="text-danger" onclick="destroy(event)">Delete</a>
+                                <a href="<?= route_to('Product::edit', $product['id']); ?>">Edit</a>
+                                <a href="<?= route_to('Product::destroy', $product['id']); ?>" class="text-danger" onclick="destroy(event)">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach ?>

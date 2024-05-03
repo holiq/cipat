@@ -12,11 +12,11 @@
         </div>
     <?php endif ?>
 
-    <a href="<?= url_to('Product::index') ?>" class="btn btn-md btn-warning mb-3">Kembali</a>
+    <a href="<?= route_to('Product::index') ?>" class="btn btn-md btn-warning mb-3">Kembali</a>
 
     <div class="card">
         <div class="card-body">
-            <form method="post" action="<?= url_to('Product::store') ?>">
+            <form method="post" action="<?= route_to('Product::store') ?>">
                 <div class="mb-4">
                     <label for"name">Nama Barang</label>
                     <input type="text" name="name" id="name" class="form-control">
