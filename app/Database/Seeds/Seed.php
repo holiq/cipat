@@ -11,5 +11,6 @@ class Seed extends Seeder
         $this->call('User');
         $this->call('Dosen');
         $this->call('Product');
+        $this->call('Customer');
     }
 }

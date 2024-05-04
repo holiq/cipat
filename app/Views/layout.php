@@ -59,7 +59,7 @@
                             </li>
                             <li class="sidebar-item">
                                 <a href="<?= route_to('Dosen::index') ?>" class="sidebar-link">
-                                    <i class="bi bi-people-fill"></i>
+                                    <i class="bi bi-person-fill"></i>
                                     <span>Dosen</span>
                                 </a>
                             </li>
@@ -67,6 +67,12 @@
                                 <a href="<?= route_to('Product::index') ?>" class="sidebar-link">
                                     <i class="bi bi-box-fill"></i>
                                     <span>Barang</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="<?= route_to('Customer::index') ?>" class="sidebar-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>Customer</span>
                                 </a>
                             </li>
                         </ul>
