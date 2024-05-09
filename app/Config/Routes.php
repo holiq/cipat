@@ -14,6 +14,7 @@ $routes->get('/dosen/edit/(:num)', 'Dosen::edit/$1');
 $routes->put('/dosen/update/(:num)', 'Dosen::update/$1');
 $routes->delete('/dosen/delete/(:num)', 'Dosen::destroy/$1');
 $routes->get('/barang', 'Product::index');
+$routes->get('/barang/(:num)', 'Product::detail/$1');
 $routes->get('/barang/create', 'Product::create');
 $routes->post('/barang/store', 'Product::store');
 $routes->get('/barang/edit/(:num)', 'Product::edit/$1');

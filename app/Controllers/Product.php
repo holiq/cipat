@@ -30,6 +30,11 @@ class Product extends BaseController
         return view('product/index', $data);
     }
 
+    public function detail(int $id)
+    {
+        return $this->response->setJSON($this->product->find($id));
+    }
+
     public function create()
     {
         return view('product/create', ['title' => 'Tambah Barang']);

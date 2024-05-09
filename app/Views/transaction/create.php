@@ -119,7 +119,7 @@
         let newRow = document.querySelector('#row_1').cloneNode(true);
 
         newRow.id = `row_${++rowNumber}`;
-        newRow.querySelector('select[name="product_id[]"]').setAttribute('onchange', fetchPrice(rowNumber));
+        newRow.querySelector('select[name="product_id[]"]').setAttribute('onchange', `fetchPrice(${rowNumber})`);
         newRow.querySelector('input[name="qty[]"]').setAttribute('onchange', 'calculateTotal()');
 
         newRow.querySelector('input[name="qty[]"]').value = 1;
@@ -129,7 +129,7 @@
         newRow.querySelector('button').classList.remove('btn-primary');
         newRow.querySelector('button').classList.add('btn-danger');
         newRow.querySelector('button').innerHTML = 'Hapus';
-        newRow.querySelector('button').setAttribute('onclick', removeRow(rowNumber));
+        newRow.querySelector('button').setAttribute('onclick', `removeRow(${rowNumber})`);
 
         document.getElementById('dynamic_rows').appendChild(newRow);
     }
@@ -140,12 +140,17 @@
         calculateTotal();
     }
 
-    function fetchPrice(rowNum) {
-        let productId = document.querySelector(`#row_${rowNum} select[name='product_id[]']`).value;
+    async function fetchPrice(rowNum) {
+        const productId = document.querySelector(`#row_${rowNum} select[name='product_id[]']`).value;
 
-        let price = 1000;
+        try {
+            const response = await fetch(`/barang/${productId}`);
+            const data = await response.json();
 
-        document.querySelector(`#row_${rowNum} input[name='price[]']`).value = price;
+            document.querySelector(`#row_${rowNum} input[name='price[]']`).value = data.price;
+        } catch (error) {
+            console.error(error);
+        }
 
         calculateTotal();
     }
