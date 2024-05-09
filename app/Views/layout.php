@@ -75,6 +75,12 @@
                                     <span>Customer</span>
                                 </a>
                             </li>
+                            <li class="sidebar-item">
+                                <a href="<?= route_to('Transaction::index') ?>" class="sidebar-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>Transaksi</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
