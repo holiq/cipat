@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <div class="container-sm min-vh-100 d-flex flex-column">
-    <div class="my-auto">
+    <div class="m-auto w-100" style="max-width: 40rem;">
         <?php if (! empty(session()->getFlashdata('message'))) : ?>
             <div class="alert alert-success">
                 <span><?= session()->getFlashdata('message') ?></span>
@@ -21,7 +21,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h4>Login</h4>
+                <h1>Login</h1>
             </div>
             <div class="card-body">
                 <form method="post" action="<?= route_to('Login::process') ?>">

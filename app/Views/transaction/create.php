@@ -1,14 +1,19 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-<div class="container mt-5">
+<div class="page-heading">
+    <div class="page-title-headings mb-4">
+        <h3>Tambah Transaksi</h3>
+    </div>
+
     <?php if (! empty(session()->getFlashdata('message'))) : ?>
-        <div class="alert alert-danger">
+        <div class="alert alert-danger alert-dismissible show fade">
             <ul class="mb-0">
                 <?php foreach (session()->getFlashdata('message') as $error) : ?>
                     <li><?= $error ?></li>
                 <?php endforeach; ?>
             </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif ?>
 
@@ -176,7 +181,7 @@
         let subTotal = parseFloat(document.getElementById('sub_total').value);
         let discount = parseFloat(document.getElementById('discount').value);
         let tax = parseFloat(document.getElementById('tax').value);
-        let total = subTotal - (subTotal*discount/100) + (subTotal*tax/100);
+        let total = subTotal - (subTotal * discount / 100) + (subTotal * tax / 100);
 
         document.getElementById('total').value = total.toFixed(0);
 

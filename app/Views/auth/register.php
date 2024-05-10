@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <div class="container-sm min-vh-100 d-flex flex-column">
-    <div class="my-auto">
+    <div class="m-auto w-100" style="max-width: 40rem;">
         <?php if (! empty(session()->getFlashdata('errors'))) : ?>
             <div class="alert alert-danger">
                 <ul class="mb-0">
@@ -15,7 +15,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h4>Register</h4>
+                <h1>Register</h1>
             </div>
             <div class="card-body">
                 <form method="post" action="<?= route_to('Register::process') ?>">

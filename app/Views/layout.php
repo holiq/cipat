@@ -77,8 +77,14 @@
                             </li>
                             <li class="sidebar-item">
                                 <a href="<?= route_to('Transaction::index') ?>" class="sidebar-link">
-                                    <i class="bi bi-people-fill"></i>
+                                    <i class="bi bi-credit-card-fill"></i>
                                     <span>Transaksi</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="<?= route_to('Login::destroy') ?>" class="sidebar-link">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                    <span>Logout</span>
                                 </a>
                             </li>
                         </ul>
@@ -91,7 +97,7 @@
         </header>
     <?php endif; ?>
 
-    <main id="app">
+    <main id="main">
         <?= $this->renderSection('content') ?>
     </main>
 

@@ -1,10 +1,15 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-<div class="container mt-5">
+<div class="page-heading">
+    <div class="page-title-headings mb-4">
+        <h3>List Transaksi</h3>
+    </div>
+
     <?php if (! empty(session()->getFlashdata('message'))) : ?>
-        <div class="alert alert-success">
+        <div class="alert alert-success alert-dismissible show fade">
             <?= session()->getFlashdata('message') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif ?>
 
@@ -32,20 +37,19 @@
                             <td><?= $row['customer_name'] ?></td>
                             <td><?= $row['transaction_date'] ?></td>
                             <td class="text-center">
-                                <button class="btn btn-link text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#coll-<?= $row['id'] ?>" aria-expanded="false" aria-controls="coll-<?= $row['id'] ?>">Detail</button>
-                                <a href="<?= route_to('Product::edit', $row['id']); ?>" class="btn btn-link">Edit</a>
-                                <a href="<?= route_to('Product::destroy', $row['id']); ?>" class="btn btn-link text-danger" onclick="destroy(event)">Delete</a>
+                                <input class="btn-link bg-transparent border-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#coll-<?= $row['id'] ?>" aria-expanded="false" aria-controls="coll-<?= $row['id'] ?>" value="Detail">
+                                <a href="<?= route_to('Product::edit', $row['id']); ?>" class="btn-link">Edit</a>
+                                <a href="<?= route_to('Product::destroy', $row['id']); ?>" class="btn-link text-danger" onclick="destroy(event)">Delete</a>
                             </td>
                         </tr>
                         <tr class="collapse multi-collapse" id="coll-<?= $row['id'] ?>">
-                            <td></td>
-                            <td colspan="4">
+                            <td colspan="5" class="pl-4">
                                 <div class="row g-2">
                                     <div class="col-3">
                                         <h6>Barang</h6>
                                     </div>
                                     <div class="col-3">
-                                        <h6>Jumalah</h6>
+                                        <h6>Jumalh</h6>
                                     </div>
                                     <div class="col-3">
                                         <h6>Harga</h6>
