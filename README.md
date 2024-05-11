@@ -7,9 +7,11 @@ git clone https://github.com/holiq/cipat.git
 cd cipat
 cp env .env
 php spark key:generate
+
 # setting database on .env
 php spark migrate
-php spark db:seed
+php spark db:seed Seed
+
 # run server
 php spark serve
 ```
