@@ -49,7 +49,7 @@
                                         <h6>Barang</h6>
                                     </div>
                                     <div class="col-3">
-                                        <h6>Jumalh</h6>
+                                        <h6>Jumlah</h6>
                                     </div>
                                     <div class="col-3">
                                         <h6>Harga</h6>
